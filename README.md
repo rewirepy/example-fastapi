@@ -1,4 +1,3 @@
-
 # example-fastapi
 
 ## A Simple Example of Using `rewire` with FastAPI
@@ -17,13 +16,10 @@ This file contains settings that apply to the entire application, such as databa
 
 By listing folders in this file, we can use `rewire` to automatically import files inside.
 
-### Setup Instructions
 
-1. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-2. Start the application:
-   ```
-   python __main__.py
-   ```
+## To run the example application, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/rewirepy/example-fastapi`
+2. Navigate to the project directory: `cd example-fastapi`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Run the application: `python __main__.py`

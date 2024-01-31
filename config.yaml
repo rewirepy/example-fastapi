@@ -1,0 +1,6 @@
+src:
+  fastapi:
+    port: !env PORT:8081
+    title: !pyexec |
+      from pathlib import Path
+      return Path(".").absolute().name

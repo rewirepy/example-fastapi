@@ -2,7 +2,7 @@ from fastapi import APIRouter, FastAPI
 from rewire.plugins import simple_plugin
 
 plugin = simple_plugin()
-router = APIRouter()
+router = APIRouter(tags=["demo"])
 
 
 @router.get("/hello")

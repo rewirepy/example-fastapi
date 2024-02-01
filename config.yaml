@@ -8,3 +8,22 @@ rewire:
   log:
     sinks:
       - level: TRACE
+rewire_fastapi:
+  server: "hypercorn"
+  app: # will be passed to FastAPI instance
+    title: "Rewire Fastapi example"
+  uvicorn: # (optional)
+    port: 8888
+  hypercorn: # (optional)
+    bind: "0.0.0.0:8888"
+  routes:  # (optional)
+    tag_prefix: "myapp:"
+  patch: # (optional)
+    swagger_hierarchical_tags: true
+    tag_prefixes: true
+  middleware:
+    cors: # enable cors middleware (optional)
+      allow_origins: ["*"]
+      allow_methods: ["*"]
+      allow_headers: ["*"]
+

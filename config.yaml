@@ -4,3 +4,7 @@ src:
     title: !pyexec |
       from pathlib import Path
       return Path(".").absolute().name
+rewire:
+  log:
+    sinks:
+      - level: TRACE

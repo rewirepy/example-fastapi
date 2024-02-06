@@ -1,9 +1,3 @@
-src:
-  fastapi:
-    port: !env PORT:8081
-    title: !pyexec |
-      from pathlib import Path
-      return Path(".").absolute().name
 rewire:
   log:
     sinks:
@@ -11,7 +5,9 @@ rewire:
 rewire_fastapi:
   server: "hypercorn"
   app: # will be passed to FastAPI instance
-    title: "Rewire Fastapi example"
+    title: !pyexec |
+      from pathlib import Path
+      return Path(".").absolute().name
   uvicorn: # (optional)
     port: 8888
   hypercorn: # (optional)
